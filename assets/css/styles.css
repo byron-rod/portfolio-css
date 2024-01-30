@@ -86,21 +86,244 @@ body {
   display: inline-block;
   width: 18rem;
   height: 18rem;
-  margin-top: 7rem;
+  margin-top: 5rem;
   position: relative;
-  background-color: var(--color-main);
-  border: 3px solid var(--color-main);
-  border-radius: 20rem;
-  overflow: hidden;
+  z-index: 1;
 }
 
 .user-info__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background-color: var(--color-main);
+  border: 3px solid var(--color-main);
+  border-radius: 20rem;
+}
+
+.user-info__container-image::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 9%;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-repeating-radial-gradient(
+    center center,
+    #fff,
+    #fff 1px,
+    transparent 0px,
+    transparent 100%
+  );
+  background-size: 0.6rem 0.6rem;
+  border-radius: 30rem;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.user-info__name {
+  color: var(--color-main);
+  font-size: 3.5rem;
+  font-weight: normal;
+  margin-top: 2.6rem;
+}
+
+.user-info__job {
+  font-size: 1.7rem;
+  font-weight: 200;
+  color: var(--color-main);
+}
+
+.user-info__links {
+  margin-bottom: 3.6rem;
+}
+
+.links__social {
+  text-align: center;
+  margin-top: 2rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.social__option {
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  opacity: 0.9;
+  border-radius: 3rem;
+  transition: all 300ms linear;
+}
+
+.social__option:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-info__buttons {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.user-info__btn {
+  border: 2px solid var(--color-main);
+  padding: 3rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  justify-content: center;
+  border-radius: 3.2rem;
+  color: var(--color-main);
+
+  box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.22);
+  transition: all 300ms ease-in-out;
+}
+
+.user-info__btn:hover {
+  background-color: var(--color-main);
+  color: var(--color-secondary);
+}
+
+.user-info__footer {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 1rem;
+  justify-content: center;
+  text-align: center;
+  margin-left: 6rem;
+  margin-right: 4rem;
+}
+
+/* Sidebar menu */
+.layout__menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -105px;
+  min-width: 11rem;
+  background-color: var(--color-transparent);
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 60%;
+  min-height: 32rem;
+  background-color: var(--color-main);
+  box-shadow: 0 0 3rem -0.5rem rgba(0, 0, 0, 0.15);
+  border-radius: 4rem;
+  padding: 2rem 0;
+  margin-left: 2.5rem;
+}
+
+.menu__icon {
+  color: var(--color-icon);
+  font-size: 2.8rem;
+  transition: all 300ms ease-in-out;
+}
+
+.menu__option {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.menu__option:hover .menu__icon {
+  color: var(--color-secondary);
+}
+
+.menu__overlay {
+  position: absolute;
+  right: 0;
+  margin-top: -3rem;
+  opacity: 0;
+  display: block;
+  color: #222;
+  background-color: var(--color-secondary);
+  white-space: nowrap;
+  color: var(--color-main);
+  padding: 0.5rem 1rem;
+  transition: all 300ms ease-in-out;
+}
+
+.menu__option:hover .menu__overlay {
+  opacity: 1;
+  right: 100%;
 }
 
 /* Content */
 .layout__content {
   grid-area: content;
+  background-color: var(--color-secondary);
+  border-radius: 0 10rem 10rem 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+.content__page {
+  background-color: var(--color-main);
+  min-height: 100%;
+  border-radius: 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page__name {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+
+.page__job {
+  font-size: 2.1rem;
+  font-weight: lighter;
+  color: var(--color-subtitle);
+}
+
+/* About me page */
+
+.content__about {
+  display: block;
+  height: 100%;
+  min-height: 100%;
+  padding: 6rem;
+  padding-right: 3rem;
+  overflow: auto;
+}
+
+.about__header {
+  margin-bottom: 4.5rem;
+  display: inline-block;
+}
+
+.about__title {
+  font-size: 3.2rem;
+  position: relative;
+}
+
+.about__title::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  top: 20px;
+  right: -25px;
+  background-image: -webkit-repeating-radial-gradient(
+    center center,
+    var(--color-secondary),
+    var(--color-secondary) 1px,
+    transparent 0px,
+    transparent 100%
+  );
+  background-size: 6px 6px;
+}
+
+.title__color {
+  color: var(--color-secondary);
 }
