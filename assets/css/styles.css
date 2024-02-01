@@ -11,6 +11,7 @@
 
   --color-border-reviews: #e5e6e7;
   --color-company: #a5a6a7;
+  --color-background-certificate: #f5f5f5;
 }
 
 /* general styles */
@@ -174,8 +175,6 @@ body {
   padding: 3rem;
   padding-top: 1.3rem;
   padding-bottom: 1.3rem;
-  /* margin-left: 10rem;
-  margin-right: 10rem; */
   justify-content: center;
   border-radius: 3.2rem;
   color: var(--color-main);
@@ -292,8 +291,10 @@ body {
 }
 
 /* About me page */
+/* Curriculum page */
 
-.content__about {
+.content__about,
+.content__resume {
   display: block;
   height: 100%;
   min-height: 100%;
@@ -302,12 +303,14 @@ body {
   overflow: auto;
 }
 
-.about__header {
+.about__header,
+.resume__header {
   margin-bottom: 3.5rem;
   display: flex;
 }
 
-.about__title {
+.about__title,
+.resume__title {
   font-size: 3.2rem;
   position: relative;
 }
@@ -372,7 +375,8 @@ body {
 .reviews__header,
 .clients__header,
 .prices__header,
-.extras__header {
+.extras__header,
+.resume__subheader {
   display: flex;
   padding-right: 1.2rem;
   position: relative;
@@ -383,7 +387,8 @@ body {
 .reviews__title,
 .clients__title,
 .prices__title,
-.extras__title {
+.extras__title,
+.resume__subtitle {
   font-size: 2.1rem;
 }
 
@@ -663,4 +668,243 @@ body {
   line-height: 3rem;
   font-size: 2.4rem;
   color: var(--color-subtitle);
+}
+
+/* Styles for Curriculum */
+
+.resume__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Left side */
+.resume__left {
+  flex-basis: 58%;
+  margin-right: 1.5rem;
+}
+
+.resume__timelines {
+  margin-bottom: 3rem;
+}
+
+.timelines__timeline {
+  display: flex;
+  width: 100%;
+  position: relative;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+}
+
+.timeline__header {
+  flex-basis: 30%;
+  text-align: right;
+  padding-right: 2.5rem;
+}
+
+.timeline__year {
+  margin: 0.3rem 0;
+  line-height: 1, 9rem;
+  font-size: 1.4rem;
+}
+
+.timeline__company {
+  display: block;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--color-company);
+}
+
+.timeline__description {
+  width: 70%;
+  padding-left: 2.5rem;
+  padding-right: 1.5rem;
+}
+
+.timeline__title {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.timeline__text {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.timeline__divider {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  bottom: -18px;
+  width: 1px;
+  background-color: var(--color-border-reviews);
+}
+
+.timeline__divider::before {
+  content: "";
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: -0.8rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  background-color: var(--color-secondary);
+  border-radius: 10rem;
+  opacity: 0.25;
+}
+
+.timeline__divider::after {
+  content: "";
+  position: absolute;
+  margin-top: 0.8rem;
+  margin-left: -0.4rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: var(--color-main);
+  border: 2px solid var(--color-secondary);
+  border-radius: 10rem;
+  opacity: 1;
+}
+
+/* right side */
+.resume__right {
+  flex-basis: 41%;
+  padding: 0 1.5rem;
+}
+.resume__skills {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.skills__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills__text {
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.skills__number {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: var(--color-subtitle);
+  margin-bottom: 0.5rem;
+}
+
+.skills__progressbar {
+  width: 100%;
+  height: 1rem;
+  border: 1px solid var(--color-secondary);
+  background-color: var(--color-main);
+  margin-bottom: 1rem;
+}
+
+.skills__percentage {
+  height: 0.8rem;
+  background-color: var(--color-secondary);
+  border: 2px solid var(--color-main);
+  border-radius: 1rem;
+}
+
+.skills__percentage--p1 {
+  width: 100%;
+}
+.skills__percentage--p2 {
+  width: 80%;
+}
+.skills__percentage--p3 {
+  width: 95%;
+}
+.skills__percentage--p4 {
+  width: 90%;
+}
+.skills__percentage--p5 {
+  width: 95%;
+}
+.skills__percentage--p6 {
+  width: 90%;
+}
+.skills__percentage--p7 {
+  width: 75%;
+}
+.skills__percentage--p8 {
+  width: 60%;
+}
+
+/* knowledge */
+
+.knowledges__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.knowledges__option {
+  font-size: 1.4rem;
+  padding: 0.2rem 1rem;
+  margin: 0.3rem 0.3rem;
+  background-color: var(--color-secondary);
+  border-radius: 0.3rem;
+  color: var(--color-main);
+}
+
+.knowledges__option:hover {
+  background-color: var(--color-border-reviews);
+  color: var(--color-secondary);
+  font-weight: 500;
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+/* certificates */
+
+.certificates__container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.certificates__certificate {
+  flex-basis: calc(50% - 3rem);
+  border: 2px solid var(--color-border-reviews);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.certificates__logo {
+  width: 16rem;
+  height: 100%;
+  padding: 2rem;
+  background-color: var(--color-background-certificate);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate__image {
+  width: 100%;
+}
+
+.certificate__content {
+  padding: 2rem 2.5rem;
+}
+
+.certificate__title {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.certicate__id {
+  display: block;
+  font-size: 1.3rem;
+  color: var(--color-subtitle);
+}
+
+.certificate__date {
+  font-size: 1.2rem;
+  color: var(--color-subtitle);
+  opacity: 0.9;
 }
