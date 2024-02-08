@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
+    <link
+      rel="stylesheet"
+      href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/scroll.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Portafolio CSS</title>
+  </head>
+  <body>
+    <!-- layout -->
+    <div class="layout">
+      <!-- aside details -->
+      <aside class="layout__aside">
+        <section class="aside__user-info">
+          <!-- info general -->
+          <div class="user-info__general">
+            <div class="user-info__container-image">
+              <img
+                src="assets/img/kate-libby.jpg"
+                alt="profile picture"
+                class="user-info__image"
+              />
+            </div>
+            <h2 class="user-info__name">Kate Libby</h2>
+            <h4 class="user-info__job">Software Engineer</h4>
+
+            <!-- Navigation Menu -->
+            <nav class="layout__menu">
+              <ul class="menu__list">
+                <li class="menu__option">
+                  <a href="index.html" class="menu__link">
+                    <i class="menu__icon fa-solid fa-house"></i>
+                    <span class="menu__overlay">Home</span>
+                  </a>
+                </li>
+
+                <li class="menu__option">
+                  <a href="about.html" class="menu__link">
+                    <i class="menu__icon fa-solid fa-user"></i>
+                    <span class="menu__overlay">About</span>
+                  </a>
+                </li>
+
+                <li class="menu__option">
+                  <a href="curriculum.html" class="menu__link">
+                    <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                    <span class="menu__overlay">Curriculum</span>
+                  </a>
+                </li>
+
+                <li class="menu__option">
+                  <a
+                    href="portfolio.html"
+                    class="menu__link menu__link--active"
+                  >
+                    <i class="menu__icon fa-solid fa-briefcase"></i>
+                    <span class="menu__overlay">Portfolio</span>
+                  </a>
+                </li>
+
+                <li class="menu__option">
+                  <a href="blog.html" class="menu__link">
+                    <i class="menu__icon fa-solid fa-book"></i>
+                    <span class="menu__overlay">Blog</span>
+                  </a>
+                </li>
+
+                <li class="menu__option">
+                  <a href="contact.html" class="menu__link">
+                    <i class="menu__icon fa-solid fa-envelope"></i>
+                    <span class="menu__overlay">Contact</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- social links -->
+            <div class="user-info__links">
+              <ul class="links__social">
+                <li class="social__option">
+                  <a href="#" class="social__link">
+                    <i class="social__icon fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+
+                <li class="social__option">
+                  <a href="#" class="social__link">
+                    <i class="social__icon fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
+
+                <li class="social__option">
+                  <a href="#" class="social__link">
+                    <i class="social__icon fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- download CV button -->
+            <div class="user-info__buttons">
+              <a href="#" class="user-info__btn">Download CV</a>
+            </div>
+
+            <!-- footer -->
+            <div class="user-info__footer">
+              &copy; 2024 Byron Rodriguez Design. All rights reserved.
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <!-- main content -->
+      <main class="layout__content">
+        <section class="content__page content__portfolio">
+          <header class="portfolio__header">
+            <h1 class="portfolio__title">Portfolio</h1>
+          </header>
+
+          <!-- left side -->
+          <nav class="portfolio__navbar">
+            <ul class="portfolio__menu">
+              <li class="potfolio__option portfolio__option--active">
+                <a href="#" class="portfolio__link">All</a>
+              </li>
+              <li class="portfolio__option">
+                <a href="#" class="portfolio__link">Cybersecurity</a>
+              </li>
+              <li class="portfolio__option">
+                <a href="#" class="portfolio__link">Websites</a>
+              </li>
+              <li class="portfolio__option">
+                <a href="#" class="portfolio__link">Social Media</a>
+              </li>
+              <li class="portfolio__option">
+                <a href="#" class="portfolio__link">Videogames</a>
+              </li>
+              <li class="portfolio__option">
+                <a href="#" class="portfolio__link">Video Editing</a>
+              </li>
+            </ul>
+          </nav>
+          <section class="portfolio__gallery">
+            <figure class="gallery__item">
+              <div class="gallery__conteiner-image">
+                <a href="#" class="gallery__link">
+                  <img
+                    src="assets/img/galeria-2.jpg"
+                    alt="hacking image"
+                    class="gallery__image"
+                  />
+                </a>
+              </div>
+              <figcaption class="gallery__title">Cybersecurity</figcaption>
+              <i class="fa-solid fa-robot gallery__icon"></i>
+              <span class="gallery__category">Cybersecurity</span>
+            </figure>
+
+            <figure class="gallery__item">
+              <div class="gallery__conteiner-image">
+                <a href="#" class="gallery__link">
+                  <img
+                    src="assets/img/galeria-3.jpg"
+                    alt="hacking image"
+                    class="gallery__image"
+                  />
+                </a>
+              </div>
+              <figcaption class="gallery__title">Websites</figcaption>
+              <i class="gallery__icon fa-solid fa-computer"></i>
+              <span class="gallery__category">Web Development</span>
+            </figure>
+
+            <figure class="gallery__item">
+              <div class="gallery__conteiner-image">
+                <a href="#" class="gallery__link">
+                  <img
+                    src="assets/img/galeria-4.jpg"
+                    alt="hacking image"
+                    class="gallery__image"
+                  />
+                </a>
+              </div>
+              <figcaption class="gallery__title">Social Media</figcaption>
+              <i class="gallery__icon fa-solid fa-camera-retro"></i>
+              <span class="gallery__category">Social Marketing</span>
+            </figure>
+
+            <figure class="gallery__item">
+              <div class="gallery__conteiner-image">
+                <a href="#" class="gallery__link">
+                  <img
+                    src="assets/img/galeria-5.jpg"
+                    alt="hacking image"
+                    class="gallery__image"
+                  />
+                </a>
+              </div>
+              <figcaption class="gallery__title">Video Games</figcaption>
+              <i class="gallery__icon fa-solid fa-bolt"></i>
+              <span class="gallery__category">Game Development</span>
+            </figure>
+
+            <figure class="gallery__item">
+              <div class="gallery__conteiner-image">
+                <a href="#" class="gallery__link">
+                  <img
+                    src="assets/img/galeria-6.jpg"
+                    alt="hacking image"
+                    class="gallery__image"
+                  />
+                </a>
+              </div>
+              <figcaption class="gallery__title">Design</figcaption>
+              <i class="gallery__icon fa-solid fa-font"></i>
+              <span class="gallery__category">Web Design</span>
+            </figure>
+
+            <figure class="gallery__item">
+              <div class="gallery__conteiner-image">
+                <a href="#" class="gallery__link">
+                  <img
+                    src="assets/img/galeria-1.jpg"
+                    alt="hacking image"
+                    class="gallery__image"
+                  />
+                </a>
+              </div>
+              <figcaption class="gallery__title">Video Editing</figcaption>
+              <i class="gallery__icon fa-solid fa-film"></i>
+              <span class="gallery__category">Video Editing</span>
+            </figure>
+          </section>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
